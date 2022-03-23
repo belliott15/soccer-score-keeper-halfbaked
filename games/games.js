@@ -89,9 +89,9 @@ logoutButton.addEventListener('click', async() => {
 });
 
  // on load . . .
-window.addEventListener('', async() => {
+window.addEventListener('load', async() => {
     // display all past games (hint: call displayAllGames())
-    displayAllGames();
+    await displayAllGames();
 });
 
 
