@@ -1,7 +1,7 @@
-export function renderGame(game) {
+export function renderGame(name1, name2, score1, score2) {
     const div = document.createElement('div');
-    const team1Div = renderTeam(game.name1, game.score1);
-    const team2Div = renderTeam(game.name2, game.score2);
+    const team1Div = renderTeam(name1, score1);
+    const team2Div = renderTeam(name2, score2);
 
     div.append(team1Div, team2Div);
 
