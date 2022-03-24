@@ -3,6 +3,7 @@ import {
     checkAuth,
     getGames,
     createGame,
+    deleteData,
 } from '../fetch-utils.js';
 import { renderGame } from '../render-utils.js';
 
@@ -114,6 +115,10 @@ async function displayAllGames() {
     const allGames = await getGames();
     for (let game of allGames){
         const pastGame = renderGame(game);
+        pastGame.addEventListener('click', async() => {
+            await deleteData(game.id);
+            await displayAllGames();
+        });
         pastGamesEl.append(pastGame);
     }
     // loop through the past games 

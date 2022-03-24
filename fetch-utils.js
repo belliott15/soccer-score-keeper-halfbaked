@@ -72,3 +72,12 @@ export async function logout() {
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
+
+export async function deleteData(id){
+    const response = await client
+        .from('games')
+        .delete()
+        .match({ id: id });
+
+    return response.body;
+}

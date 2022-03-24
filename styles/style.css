@@ -213,3 +213,9 @@ p {
     right: 20px;
     top: 20px;
 }
+
+#past-games-container > div:hover{
+    opacity: .6;
+    background-color: red;
+    cursor: pointer;
+}
